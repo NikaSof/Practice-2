@@ -18,11 +18,12 @@ void circle::set_circle(float R1, float x1, float y1) {
 	this -> x = x1;
 	this -> y = y1;
 }
-float circle::square(float R) {
+float circle::square() {
 	float P = 3.14153;
 	return P * R * R;
 }
 bool circle::tringle_around(float a, float b, float c) {
+	float p, s;
 	p = (a + b + c) / 2;
 	s = sqrt(p * (p - a) * (p - b) * (p - c));
 	if (a + b > c && a + c > b && b + c > a) {
