@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath>
-#include "Header3.h"
+#include "ind_prog_2_3.h"
 
 figure::figure(float x1, float x2, float x3, float x4, float y1, float y2, float y3, float y4) {
     this->x1 = x1;
@@ -12,15 +12,15 @@ figure::figure(float x1, float x2, float x3, float x4, float y1, float y2, float
     this->y3 = y3;
     this->y4 = y4;
 }
-void figure::show(float x1, float x2, float x3, float x4, float y1, float y2, float y3, float y4) {
+void figure::show() {
     float a = sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2)), b = sqrt((x2 - x3) * (x2 - x3) + (y2 - y3) * (y2 - y3)),
         c = sqrt((x3 - x4) * (x3 - x4) + (y3 - y4) * (y3 - y4)), d = sqrt((x4 - x1) * (x4 - x1) + (y4 - y1) * (y4 - y1));
-    std::cout << "Сторона A: " << a << endl;
-    std::cout << "Сторона B: " << b << endl;
-    std::cout << "Сторона C: " << c << endl;
-    std::cout << "Сторона D: " << d << endl;
+    std::cout << "РЎС‚РѕСЂРѕРЅР° A: " << a;
+    std::cout << "РЎС‚РѕСЂРѕРЅР° B: " << b;
+    std::cout << "РЎС‚РѕСЂРѕРЅР° C: " << c;
+    std::cout << "РЎС‚РѕСЂРѕРЅР° D: " << d;
 }
-bool figure::is_prug(float x1, float x2, float x3, float x4, float y1, float y2, float y3, float y4) {
+bool figure::is_prug() {
     float a, float d;
     a = sqrt((x1 - x3) * (x1 - x3) + (y1 - y3) * (y1 - y3));
     d = sqrt((x2 - x4) * (x2 - x4) + (y2 - y4) * (y2 - y4));
@@ -30,7 +30,7 @@ bool figure::is_prug(float x1, float x2, float x3, float x4, float y1, float y2,
         return false;
     }
 }
-bool figure::is_square(float x1, float x2, float x3, float x4, float y1, float y2, float y3, float y4) {
+bool figure::is_square() {
     float s1, s2, S;
     float p1, p2;
     float a, b, c, a1, b1;
@@ -46,7 +46,7 @@ bool figure::is_square(float x1, float x2, float x3, float x4, float y1, float y
     S = s1 + s2;
     return S;
 }
-bool figure::is_romd(float x1, float x2, float x3, float x4, float y1, float y2, float y3, float y4) {
+bool figure::is_romd() {
     float a = sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2)), b = sqrt((x2 - x3) * (x2 - x3) + (y2 - y3) * (y2 - y3)),
         c = sqrt((x3 - x4) * (x3 - x4) + (y3 - y4) * (y3 - y4)), d = sqrt((x4 - x1) * (x4 - x1) + (y4 - y1) * (y4 - y1));
     float l1 = sqrt((x1 - x3) * (x1 - x3) + (y1 - y3) * (y1 - y3)), l2 = sqrt((x2 - x4) * (x2 - x4) + (y2 - y4) * (y2 - y4));
@@ -56,7 +56,7 @@ bool figure::is_romd(float x1, float x2, float x3, float x4, float y1, float y2,
         return false;
     }
 }
-bool figure::is_in_circle(float x1, float x2, float x3, float x4, float y1, float y2, float y3, float y4) {
+bool figure::is_in_circle() {
     float a = sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2)), b = sqrt((x2 - x3) * (x2 - x3) + (y2 - y3) * (y2 - y3)),
         c = sqrt((x3 - x4) * (x3 - x4) + (y3 - y4) * (y3 - y4)), d = sqrt((x4 - x1) * (x4 - x1) + (y4 - y1) * (y4 - y1));
     float l1 = sqrt((x1 - x3) * (x1 - x3) + (y1 - y3) * (y1 - y3)), l2 = sqrt((x2 - x4) * (x2 - x4) + (y2 - y4) * (y2 - y4));
@@ -66,7 +66,7 @@ bool figure::is_in_circle(float x1, float x2, float x3, float x4, float y1, floa
         return false;
     }
 }
-bool figure::is_out_circle(float x1, float x2, float x3, float x4, float y1, float y2, float y3, float y4) {
+bool figure::is_out_circle() {
     float a = sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2)), b = sqrt((x2 - x3) * (x2 - x3) + (y2 - y3) * (y2 - y3)),
         c = sqrt((x3 - x4) * (x3 - x4) + (y3 - y4) * (y3 - y4)), d = sqrt((x4 - x1) * (x4 - x1) + (y4 - y1) * (y4 - y1));
     float l1 = sqrt((x1 - x3) * (x1 - x3) + (y1 - y3) * (y1 - y3)), l2 = sqrt((x2 - x4) * (x2 - x4) + (y2 - y4) * (y2 - y4));
